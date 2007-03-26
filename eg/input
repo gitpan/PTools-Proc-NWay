@@ -1,0 +1,9 @@
+sleep 1
+sleep 3
+sleep 2
+echo "*------foo-----*"
+sleep 1
+sleep 1
+echo "((((( xyzzy )))))"
+echo "<<<--  bar  -->>>"
+sleep 2

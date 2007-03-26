@@ -1,0 +1,68 @@
+PTools-Proc-NWay version 0.01
+=============================
+
+Given today's multi-processer computers, what's missing?
+The ability to multi-process commands, of course! Say you're
+a system administrator, and you have to run a set of commands
+for each of 1,000+ user accounts. Why would you choose to
+process each user's account one at a time??
+
+Enter NWay. This POE-based utility will take your list of
+1,000 tasks (or however many) and ensure that only a limited 
+number of commands will run simultaneously. 
+
+Say you have an 8-way machine. Run 8 tasks at a time. Say
+you can determine that each task uses only about half of the
+CPU time on a given processor. Run 16 tasks at a time.
+
+In the first usage of this utility, over 6,500 ClearCase
+Views required reformatting. The total accumulated time
+to process was over 75 hours, while the total ELAPSED
+time was just under 10 hours. As each reformat used up
+just about 100% of a CPU, 8 tasks ran at a time, giving
+almost an 8x improvement. Not bad. Not too bad at all.
+
+There is quite a bit of flexibility on input. A simple data
+file, or task list, is the input along with a few command
+line options. Additional cmd-line arguments can be included
+to alter defaults specified within the task list.
+
+Error checking is done on a task-by-task basis. Logging can 
+be done on a task-by task basis, or combined into one large 
+log file. A summary of results is generated including error
+count, start time, end time, elapsed and accumulated times.
+
+If you run the tasks as a 'root' user, you can specify what
+uid and/or gid will be used to actually run each task. And,
+if you don't like the behavior of the command processor,
+you can specify your custom Perl class either on the command
+line or within the task list.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other CPAN distributions.
+
+  DateTime    - version 1.16
+  POE         - a reasonably recent version
+  PTools      - any version
+  PTools-SDF  - any version
+
+COPYRIGHT AND LICENCE
+
+Put the correct copyright and licence information here.
+
+Copyright (C) 2007 by Chris Cobb
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available.
+

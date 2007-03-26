@@ -1,0 +1,15 @@
+#
+# File:  TODO
+# Desc:  List of ToDo's for PTools-Proc-NWay distribution
+#
+
+. Fixes and enhancements
+  -  complete SIG CHLD handler logic in Driver
+
+. Add tests, especially for:
+  -  well, everything...
+
+. Update documentation on PTools website
+  -  rearrange modules under new name space
+  -  correct any mention of module names
+
